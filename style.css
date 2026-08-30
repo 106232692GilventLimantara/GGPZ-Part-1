@@ -8,9 +8,9 @@ h1 {
 
 
 
- * { font-family: calibri, sans-serif; color:#2F4F4F; background-color: #F3F1E4;}     
+ * { font-family: calibri, sans-serif; color:#2F4F4F;}     
 
-
+body {background-color: #F3F1E4;}
 table, tr, td, th{border: 1px solid black}
 
 nav a {border: 2px solid lightgray;text-decoration: none;padding: 2px}
