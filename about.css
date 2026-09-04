@@ -1,0 +1,230 @@
+/* =========================================
+   GGPZ - About Page Styles
+   ========================================= */
+
+/* Main About Page Content */
+main {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: rgba(18, 11, 28, 0.90);
+    color: #ffffff;
+    border-radius: 12px;
+}
+
+/* Main Page Heading */
+main h2 {
+    color: #a855f7;
+    text-align: center;
+    font-size: 2.2em;
+    margin-bottom: 35px;
+}
+
+/* Section Styling */
+main section {
+    margin-bottom: 35px;
+    padding: 25px;
+    background-color: rgba(11, 7, 18, 0.85);
+    border: 1px solid #6d28d9;
+    border-radius: 10px;
+}
+
+/* Section Headings */
+main h3 {
+    color: #c084fc;
+    border-bottom: 2px solid #a855f7;
+    padding-bottom: 8px;
+    margin-top: 0;
+}
+
+/* =========================================
+   Group Information
+   ========================================= */
+
+main ul {
+    line-height: 1.8;
+}
+
+main ul ul {
+    margin-top: 5px;
+    color: #d8b4fe;
+}
+
+/* =========================================
+   Team Contributions
+   ========================================= */
+
+main dl {
+    margin: 0;
+}
+
+main dt {
+    color: #c084fc;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+main dd {
+    margin-left: 20px;
+    margin-top: 5px;
+    color: #e5e7eb;
+    line-height: 1.6;
+}
+
+/* =========================================
+   Member Quotes
+   ========================================= */
+
+main article {
+    margin: 20px 0;
+    padding: 15px 20px;
+    border-left: 4px solid #a855f7;
+    background-color: rgba(168, 85, 247, 0.08);
+}
+
+main article h4 {
+    color: #c084fc;
+    margin-top: 0;
+}
+
+main blockquote {
+    margin: 10px 0;
+    font-style: italic;
+    color: #f3e8ff;
+}
+
+main blockquote p {
+    margin-bottom: 8px;
+}
+
+/* =========================================
+   Group Photo
+   ========================================= */
+
+main figure {
+    margin: 20px auto;
+    text-align: center;
+    max-width: 800px;
+}
+
+main figure img {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto;
+    border: 3px solid #a855f7;
+    border-radius: 10px;
+}
+
+main figcaption {
+    margin-top: 10px;
+    color: #d8b4fe;
+    font-style: italic;
+}
+
+/* =========================================
+   Team Fun Facts Table
+   ========================================= */
+
+main table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: rgba(18, 11, 28, 0.95);
+}
+
+main caption {
+    caption-side: top;
+    color: #c084fc;
+    font-size: 1.2em;
+    font-weight: bold;
+    padding: 10px;
+}
+
+main th,
+main td {
+    border: 1px solid #6d28d9;
+    padding: 12px;
+    text-align: left;
+}
+
+main th {
+    background-color: #4c1d95;
+    color: #ffffff;
+}
+
+main td {
+    color: #e5e7eb;
+}
+
+/* Table hover effect */
+main tbody tr:hover {
+    background-color: rgba(168, 85, 247, 0.20);
+}
+
+/* Student ID styling */
+main td:nth-child(2) {
+    color: #c084fc;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+/* =========================================
+   Responsive Design
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    main {
+        margin: 20px;
+        padding: 20px;
+    }
+
+    main h2 {
+        font-size: 1.8em;
+    }
+
+    main section {
+        padding: 18px;
+    }
+
+    main table {
+        font-size: 0.9em;
+    }
+
+    main th,
+    main td {
+        padding: 8px;
+    }
+
+    main figure img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+
+    main {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    main h2 {
+        font-size: 1.5em;
+    }
+
+    main section {
+        padding: 15px;
+    }
+
+    main table {
+        font-size: 0.8em;
+    }
+
+    main th,
+    main td {
+        padding: 6px;
+    }
+}
