@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #0b0712;
+    color: #ffffff;
+}
+
+/* Background Video */
+#background-video {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.35);
+    z-index: -1;
+}
+
+/* Header & Nav */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background: rgba(18, 11, 28, 0.85);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+header img {
+    width: 150px;
+}
+
+nav {
+    display: flex;
+    gap: 10px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background: rgba(168, 85, 247, 0.2);
+}
+
+/* Notice Aside */
+.recruitment-notice {
+    max-width: 800px;
+    margin: 20px auto 0;
+    padding: 12px 20px;
+    background: rgba(168, 85, 247, 0.1);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 8px;
+    text-align: center;
+    color: #c084fc;
+}
+
+.recruitment-notice h2 {
+    margin: 0 0 4px;
+    font-size: 1rem;
+}
+
+.recruitment-notice p {
+    margin: 0;
+    font-size: 0.85rem;
+}
+
+main h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #c084fc; /* Màu tím sáng hợp tông Cybersecurity */
+    margin: 30px 0 20px;
+    letter-spacing: 1px;
+}
+
+/* Job List Grid */
+.job_list {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 30px;
+    justify-content: center;
+    margin: 30px auto;
+    padding: 0 20px;
+    flex: 1;
+}
+
+/* Job Card */
+.job_card {
+    padding: 20px;
+    background: rgba(30, 28, 28, 0.5);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    transition: 0.3s;
+}
+
+.job_card:hover {
+    border-color: #fff;
+    background: rgba(168, 85, 247, 0.2);
+}
+
+.job_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+}
+
+.job_content img {
+    width: 36px;
+    height: 36px;
+}
+
+.job_content h1 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.ref-num {
+    color: #c084fc;
+    font-size: 0.75rem;
+    margin: 0;
+}
+
+.short-desc {
+    color: #a78bfa;
+    font-size: 0.8rem;
+    margin: 4px 0 8px;
+}
+
+/* Details Inside Card */
+.job_details {
+    width: 100%;
+    text-align: left;
+    font-size: 0.75rem;
+    color: #d8b4fe;
+    border-top: 1px solid rgba(168, 85, 247, 0.2);
+    padding-top: 8px;
+    margin-bottom: 12px;
+}
+
+.job_details h3 {
+    font-size: 0.8rem;
+    margin: 8px 0 4px;
+    color: #fff;
+}
+
+.job_details ol, .job_details ul {
+    margin: 0;
+    padding-left: 18px;
+}
+
+/* Buttons */
+.job_content a, 
+.job_content button {
+    color: #fff;
+    text-decoration: none;
+    background: rgb(161, 101, 218);
+    border: 1px solid rgba(192, 132, 252);
+    padding: 6px 16px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.job_content a:hover {
+    background: #472d84;
+}
+
+/* Updating Card */
+.updating-card {
+    opacity: 0.6;
+    border-style: dashed;
+}
+
+.updating-card button {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.15);
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* Footer */
+footer {
+    position: relative;
+    z-index: 10;
+    background: #0b0712;
+    border-top: 1px solid rgba(168, 85, 247, 0.3);
+    padding: 20px;
+    text-align: center;
+    color: #a78bfa;
+    font-size: 0.85rem;
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;
+}
