@@ -7,7 +7,7 @@ body {
 }
 
 /* Background Video Styling */
-#background-video {
+/*#background-video {
     inset: 0;
     position: fixed;
     width: 100%;
@@ -16,7 +16,7 @@ body {
     object-fit: cover;
     z-index: -1;
 }
-
+*/
 /* Header & Navigation */
 header {
     position: sticky;
