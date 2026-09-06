@@ -42,6 +42,22 @@
          </fieldset>
          <fieldset> <!-- Fieldset for Personal Details -->
             <legend>Personal Details</legend>
+            <label for="firstname">First Name</label>
+            <input type="text" id="firstname" name="firstname" pattern="[A-Za-z]{1,20}" maxlength="20" title="Please enter a valid First Name" required>
+            <label for="lastname">Last Name</label>
+            <input type="text" id="lastname" name="lastname" pattern="[A-Za-z]{1,20}" maxlength="20" title="Please enter a valid Last Name" required>
+            <label for="dob">Date of Birth</label>
+            <input type="text" id="dob" name="dob" pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(196[1-9]|19[7-9][0-9]|200[0-8])$" 
+            placeholder="dd/mm/yyyy" title="Please enter a valid date of birth" required>
+            <!-- Realistic age restriction from 1961 to 2008 (min age is 18 and max is 65) -->
+            <fieldset> <!-- Fieldset for Gender Selection -->
+                <legend>Gender</legend>
+                <label for="male"><input type="radio" id="male" name="gender" value="male" required>Male</label>
+                <label for="female"><input type="radio" id="female" name="gender" value="female">Female</label>
+                <label for="other"><input type="radio" id="other" name="gender" value="other">Other</label>
+                <label for="genderOther"><input type="text" id="genderOther" name="genderOther" placeholder="Please specify if other">Please specify if other:</label>
+                <!-- The "genderOther" field is optional and only relevant if the user selects "Other" -->
+            </fieldset>
          </fieldset>
          <fieldset> <!-- Fieldset for Address Details -->
             <legend>Address Details</legend>
