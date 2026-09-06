@@ -36,6 +36,9 @@
          <p>Thank you for your interest in a career with GGPZ Cyber Solutions. Complete the form below with your details and the job reference number, found on our Job Descriptions page. All required fields must be filled in accurately before submitting.</p>
          <fieldset> <!-- Fieldset for Position Information -->
             <legend>Position Information</legend>
+            <label for="jobref">Job Reference:</label>
+            <input type="text" id="jobref" name="jobref" maxlength="6" pattern="[A-Z]{3}[0-9]{3}" 
+            title="Three capital letters followed by three digits, e.g. GPZ123" required>
          </fieldset>
          <fieldset> <!-- Fieldset for Personal Details -->
             <legend>Personal Details</legend>
