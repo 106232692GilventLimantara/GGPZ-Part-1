@@ -43,9 +43,9 @@
          <fieldset> <!-- Fieldset for Personal Details -->
             <legend>Personal Details</legend>
             <label for="firstname">First Name</label>
-            <input type="text" id="firstname" name="firstname" pattern="[A-Za-z]{1,20}" maxlength="20" title="Please enter a valid First Name" required>
+            <input type="text" id="firstname" name="firstname" pattern="[A-Za-z\s]{1,20}" maxlength="20" title="Please enter a valid First Name" required>
             <label for="lastname">Last Name</label>
-            <input type="text" id="lastname" name="lastname" pattern="[A-Za-z]{1,20}" maxlength="20" title="Please enter a valid Last Name" required>
+            <input type="text" id="lastname" name="lastname" pattern="[A-Za-z\s]{1,20}" maxlength="20" title="Please enter a valid Last Name" required>
             <label for="dob">Date of Birth</label>
             <input type="text" id="dob" name="dob" pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(196[1-9]|19[7-9][0-9]|200[0-8])$" 
             placeholder="dd/mm/yyyy" title="Please enter a valid date of birth" required>
@@ -54,13 +54,32 @@
                 <legend>Gender</legend>
                 <label for="male"><input type="radio" id="male" name="gender" value="male" required>Male</label>
                 <label for="female"><input type="radio" id="female" name="gender" value="female">Female</label>
-                <label for="other"><input type="radio" id="other" name="gender" value="other">Other</label>
-                <label for="genderOther"><input type="text" id="genderOther" name="genderOther" placeholder="Please specify if other">Please specify if other:</label>
+                <label for="other"><input type="radio" id="other" name="gender" value="other">Other</label><br>
+                <label for="genderOther">Please specify if other:</label>
+                <input type="text" id="genderOther" name="genderOther" placeholder="Please specify if other">
                 <!-- The "genderOther" field is optional and only relevant if the user selects "Other" -->
             </fieldset>
          </fieldset>
          <fieldset> <!-- Fieldset for Address Details -->
             <legend>Address Details</legend>
+            <label for="street_address">Street Address</label>
+            <input type="text" id="street_address" name="street_address" maxlength="40" pattern="[A-Za-z0-9\s]{1,40}" title="Please enter a valid Street Address" required>
+            <label for="suburb">Suburb</label>
+            <input type="text" id="suburb" name="suburb" maxlength="40" pattern="[A-Za-z\s]{1,40}" title="Please enter a valid Suburb" required>
+            <label for="state">State</label>
+               <select id="state" name="state" required>
+                  <option value="">Select a state</option>
+                  <option value="VIC">VIC</option>
+                  <option value="NSW">NSW</option>
+                  <option value="QLD">QLD</option>
+                  <option value="SA">SA</option>
+                  <option value="WA">WA</option>
+                  <option value="TAS">TAS</option>
+                  <option value="NT">NT</option>
+                  <option value="ACT">ACT</option>
+               </select>
+            <label for="postcode">Postcode</label>
+            <input type="text" id="postcode" name="postcode" maxlength="4" pattern="[0-9]{4}" title="Please enter a valid 4-digit Postcode" required>
          </fieldset>
          <fieldset> <!-- Fieldset for Contact Details -->
             <legend>Contact Details</legend>
