@@ -83,6 +83,10 @@
          </fieldset>
          <fieldset> <!-- Fieldset for Contact Details -->
             <legend>Contact Details</legend>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" maxlength="40" title="Please enter a valid Email Address" required>
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" minlength="8" maxlength="12" pattern="\d{8,12}" title="Please enter a valid 8-12 digit Phone Number" required>
          </fieldset>
          <fieldset> <!-- Fieldset for Skills-->
             <legend>Skills</legend>
