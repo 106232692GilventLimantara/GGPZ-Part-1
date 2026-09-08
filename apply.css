@@ -7,7 +7,7 @@ body {
 }
 
 /* Background Video Styling */
-/*#background-video {
+#background-video {
     inset: 0;
     position: fixed;
     width: 100%;
@@ -16,7 +16,7 @@ body {
     object-fit: cover;
     z-index: -1;
 }
-*/
+
 /* Header & Navigation */
 header {
     position: sticky;
@@ -68,4 +68,32 @@ footer {
 
 footer p {
     margin: 0; 
+}
+
+main {
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 40px 20px;
+    border-radius: 12px;
+    background-color: rgba(18, 11, 28, 0.90);
+    color: #FFFFFF;
+}
+
+main h1 {
+    color: #C084FC;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+main > p {
+    text-align: justify;
+    color: #E5E5E5;
+    margin-bottom: 32px;
+    line-height: 1.5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
