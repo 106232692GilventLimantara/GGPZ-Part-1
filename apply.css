@@ -97,3 +97,32 @@ form {
     flex-direction: column;
     gap: 30px;
 }
+
+fieldset {
+    background: rgba(24, 15, 36, 0.55);
+    border: 1px solid rgba(168, 85, 247, 0.25);
+    border-radius: 10px;
+    padding: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 24px;
+    row-gap: 18px;
+}
+
+/* Nested Gender fieldset stays single column, sits inline within the grid */
+fieldset fieldset {
+    grid-column: 1 / -1;
+    background: rgba(168, 85, 247, 0.05);
+    border: 1px solid rgba(168, 85, 247, 0.15);
+    display: block;
+    padding: 16px;
+}
+
+legend.sec_title {
+    grid-column: 1 / -1;
+    color: #C084FC;
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding: 0 4px 6px;
+    margin-bottom: 2px;
+}
