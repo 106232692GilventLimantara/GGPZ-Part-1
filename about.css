@@ -251,6 +251,7 @@ body {
 /* Header & Navigation */
 header {
     position: sticky;
+    top: 0;
     display: flex;
     background-color: rgba(18, 11, 28, 0.82); 
     backdrop-filter: blur(12px);
