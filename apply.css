@@ -18,16 +18,7 @@ body {
 }
 
 /* Header & Navigation */
-header {
-    position: sticky;
-    display: flex;
-    background-color: rgba(18, 11, 28, 0.82); 
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(168, 85, 247, 0.2);
-    padding: 1px 50px;
-    justify-content: space-between;
-    align-items: center;
-}
+/* shifted header styling to the apply.html as embedded style to avoid conflict with about.css */
 
 header .logo img {
     width: 160px;
@@ -71,8 +62,8 @@ footer p {
 }
 
 main {
-    max-width: 720px;
-    margin: 40px 20px;
+    max-width: 1000px;
+    margin: 40px auto;
     padding: 40px 20px;
     border-radius: 12px;
     background-color: rgba(18, 11, 28, 0.90);
@@ -155,4 +146,46 @@ legend.sec_title {
 .sec_input:focus {
     outline: 2px solid #A855F7;
     border-color: #A855F7;
+}
+
+.sec_input option {
+    color: #000000;
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+/* Fields that should take the full row (job reference, dob, other gender specs and textarea for other skills) */
+.sec_field.jobref {
+    grid-column: 1 / -1;
+}
+
+.sec_field.dob {
+    grid-column: 1 / -1;
+}
+
+.sec_field.other {
+    grid-column: 1 / -1;
+}
+
+.sec_field.skilltext {
+    resize: vertical;
+    grid-column: 1 / -1;
+    width: 100%;
+    box-sizing: border-box; 
+    /* makes sure the 10px 12px padding on .sec_input gets included within that 100% width instead 
+    of adding on top of it and causing an overflow past the fieldset's edge. */
+}
+
+/* --- Radio / checkbox groups span full width --- */
+.sec_group {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.sec_option label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer; /* this makes the whole label clickable-looking */
 }
