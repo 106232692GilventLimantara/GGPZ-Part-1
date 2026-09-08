@@ -72,7 +72,7 @@ footer p {
 
 main {
     max-width: 720px;
-    margin: 40px auto;
+    margin: 40px 20px;
     padding: 40px 20px;
     border-radius: 12px;
     background-color: rgba(18, 11, 28, 0.90);
@@ -125,4 +125,34 @@ legend.sec_title {
     font-size: 1.5rem;
     padding: 0 4px 6px;
     margin-bottom: 2px;
+}
+
+.sec_field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.sec_label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #F1F1F1;
+}
+
+.sec_input {
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(168, 85, 247, 0.3);
+    border-radius: 6px;
+    color: #ffffff;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+}
+
+.sec_input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.sec_input:focus {
+    outline: 2px solid #A855F7;
+    border-color: #A855F7;
 }

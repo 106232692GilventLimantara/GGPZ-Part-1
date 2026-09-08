@@ -13,7 +13,7 @@
 <body>
     <!-- Background Video -->
     <video autoplay muted loop id="background-video">
-        <source src="background.mp4" type="video/mp4">
+        <source src="b1.mp4" type="video/mp4">
     </video>
 
     <!-- Header & Navigation -->
@@ -36,7 +36,7 @@
        <form method="POST" action="http://mercury.swin.edu.au/it000000/formtest.php">
          <fieldset> <!-- Fieldset for Position Information -->
             <legend class="sec_title" >Position Information</legend>
-            <div class="sec_field">
+            <div class="sec_field jobref">
                 <label class="sec_label" for="jobref">Job Reference:</label>
                 <input class="sec_input" type="text" id="jobref" name="jobref" maxlength="6" pattern="[A-Z]{3}[0-9]{3}" 
                 title="Three capital letters followed by three digits, e.g. GPZ123" required>
@@ -65,6 +65,7 @@
                     <div class="sec_option"> <label for="female"><input class="sec_input" type="radio" id="female" name="gender" value="female">Female</label> </div>
                     <div class="sec_option"> <label for="other"><input class="sec_input" type="radio" id="other" name="gender" value="other">Other</label> </div>
                     <div class="sec_field">
+                    <br>
                     <label class="sec_label" for="genderOther">Please specify if other:</label>
                     <input class="sec_input" type="text" id="genderOther" name="genderOther" placeholder="Please specify if other">
                     </div>
@@ -153,7 +154,7 @@
                 </div>
             </div>
             <div class="sec_field">
-                <label class="sec_label" for="otherskills">Other Skills</label><br>
+                <label class="sec_label" for="otherskills">Other Skills</label>
                 <textarea class="sec_input" id="otherskills" name="otherskills" rows="4" cols="50" placeholder="Please specify any other skills you have"></textarea>
             </div>
             </fieldset>
