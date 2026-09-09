@@ -118,6 +118,8 @@ legend.sec_title {
     margin-bottom: 2px;
 }
 
+/* Individual Fields */
+
 .sec_field {
     display: flex;
     flex-direction: column;
@@ -188,4 +190,60 @@ legend.sec_title {
     align-items: center;
     gap: 6px;
     cursor: pointer; /* this makes the whole label clickable-looking */
+}
+
+/* --- Buttons --- */
+.sec_actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 8px;
+}
+
+.sec_actions input[type="submit"] {
+    background: #A855F7;
+    color: #ffffff;
+    border: none;
+    padding: 10px 24px;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.sec_actions input[type="submit"]:hover {
+    background: #D946EF;
+    transform: translateY(-2px);
+}
+
+.sec_actions input[type="reset"] {
+    background: transparent;
+    border: 1px solid #A855F7;
+    color: #C084FC;
+    padding: 10px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.sec_actions input[type="reset"]:hover {
+    background: #EF4444;
+    color: #ffffff;
+    border-color: #EF4444;
+    transform: translateY(-2px);
+}
+
+/* RESPONSIVE — collapse to single column on small screens */
+
+@media (max-width: 520px) 
+/* When the media screen is below 520 pixels the labels and 
+input will autmoatically collapse to a single column */
+{
+    fieldset {
+        grid-template-columns: 1fr;
+    }
+    .sec_field.full-width,
+    textarea.sec_input {
+        grid-column: 1;
+    }
 }
