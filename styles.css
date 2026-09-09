@@ -28,10 +28,6 @@ header .logo img {
     height: auto;
 }
 
-header .logo img:hover {
-    width: 120px;
-    height: auto;
-}
 
 nav a {
     color: #ffffff;
