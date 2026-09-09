@@ -223,7 +223,7 @@ legend.sec_title {
 .sec_actions input[type="reset"]:hover {
     background: #EF4444;
     color: #ffffff;
-    border-color: #EF4444;
+    border-color: #000000;
     transform: translateY(-2px);
 }
 
