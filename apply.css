@@ -241,6 +241,15 @@ input will autmoatically collapse to a single column */
         grid-column: 1;
     }
 }
+
+/* Respect users who've enabled "Reduce Motion" in their OS settings —
+   hides the moving background video instead of forcing it on everyone */
+@media (prefers-reduced-motion: reduce) {
+    #background-video {
+        display: none;
+    }
+}
+
 /* Footer */
 footer {
     background: rgba(11, 7, 18, 0.95);

@@ -12,7 +12,9 @@
 
 <body>
     <!-- Background Video -->
-    <video autoplay muted loop id="background-video">
+    <!-- aria-hidden="true": hides this purely decorative video from screen readers,
+     since it carries no meaningful content for visually impaired users -->
+    <video autoplay muted loop id="background-video" aria-hidden="true">
         <source src="b1.mp4" type="video/mp4">
     </video>
 
