@@ -8,7 +8,7 @@
     <meta name="description" content="GGPZ Cybersecurity Services Official Website">
     <meta name="keywords" content="GGPZ, Cybersecurity, Website, Security, SOC">
     <meta name="author" content="GGPZ">
-    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
@@ -19,13 +19,26 @@
 
     <!-- Header & Navigation -->
     <header>
+        <style> 
+            header {position: sticky;
+                    top: 0;
+                    display: flex;
+                    background-color: rgba(18, 11, 28, 0.90);
+                    backdrop-filter: blur(12px);
+                    border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+                    padding: 10px 50px;
+                    justify-content: space-between;
+                    align-items: center;
+                    z-index: 10;}
+        </style>
+        
         <div class="logo">
             <a href="index.html">
                 <img src="GGPZ_logo.png" alt="GGPZ Logo">
             </a>
         </div>
 
-        <nav aria-label="Main navigation">
+        <nav aria-label="Main navigation" style="display: flex; gap: 13px;">
             <a href="jobs.html">Job List</a>
             <a href="apply.html">Apply Now</a>
             <a href="about.html">About</a>
