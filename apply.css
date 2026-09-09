@@ -46,21 +46,6 @@ nav a:hover {
     border-color: #ffffff;
 }
 
-
-/* Footer */
-footer {
-    background: rgba(11, 7, 18, 0.95);
-    border-top: 1px solid rgba(168, 85, 247, 0.15);
-    padding: 20px; 
-    text-align: center; 
-    color: #8b5cf6; 
-    font-size: 0.85rem;
-}
-
-footer p {
-    margin: 0; 
-}
-
 main {
     max-width: 1000px;
     margin: 40px auto;
@@ -178,11 +163,20 @@ legend.sec_title {
 }
 
 /* --- Radio / checkbox groups span full width --- */
-.sec_group {
+.sec_gender {
     grid-column: 1 / -1;
     display: flex;
     flex-wrap: wrap;
     gap: 14px;
+}
+
+.sec_skills {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: repeat(6, auto);
+    column-gap: 24px;
+    row-gap: 12px;
 }
 
 .sec_option label {
@@ -246,4 +240,27 @@ input will autmoatically collapse to a single column */
     textarea.sec_input {
         grid-column: 1;
     }
+}
+/* Footer */
+footer {
+    background: rgba(11, 7, 18, 0.95);
+    border-top: 1px solid rgba(168, 85, 247, 0.15);
+    padding: 20px; 
+    text-align: center; 
+    color: #8b5cf6; 
+    font-size: 0.85rem;
+}
+
+footer p {
+    margin: 8px;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+
+footer a:hover {
+    text-decoration: underline;
 }
