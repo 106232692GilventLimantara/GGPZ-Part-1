@@ -28,6 +28,10 @@ header .logo img {
     height: auto;
 }
 
+header .logo img:hover {
+    width: 120px;
+    height: auto;
+}
 
 nav a {
     color: #ffffff;
@@ -44,6 +48,7 @@ nav a {
 nav a:hover {
     background-color: rgba(168, 85, 247, 0.2);
     border-color: #ffffff;
+    transform: translateY(-2px);
 }
 
 
