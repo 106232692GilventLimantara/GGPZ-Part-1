@@ -136,14 +136,16 @@ th {
 
 /* Notice Aside (Đặt bên trong main) */
 .recruitment-notice {
-    max-width: 100%;
-    margin: 0 auto 20px;
-    padding: 14px 20px;
     background: rgba(168, 85, 247, 0.1);
     border: 1px solid rgba(168, 85, 247, 0.3);
     border-radius: 8px;
-    text-align: center;
+    max-width: 250px;
+    margin-left: 20px;
+    padding: 20px;
     color: #c084fc;
+    position: sticky;
+    top: 90px;
+    float: right;
 }
 
 .recruitment-notice h2 {
@@ -155,6 +157,18 @@ th {
 .recruitment-notice p {
     margin: 0;
     font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.recruitment-notice p,
+.recruitment-notice ul {
+    margin: 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.recruitment-notice ul {
+    padding-left: 18px;
 }
 
 /* Main Content */
@@ -338,14 +352,18 @@ main td:nth-child(2) {
    Job List Grid & Cards (Đã đổi article thành section)
    ========================================= */
 
-.job_list {
+    .jobs_layout {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: 300px 1fr;
+    gap: 24px;
+    align-items: start;
+}
+
+   .job_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 30px;
-    justify-content: center;
-    margin: 30px auto;
-    padding: 0 20px;
-    flex: 1;
+    margin-top: 30px;
 }
 
 /* Job Card (Dùng section.job_card) */
@@ -613,13 +631,25 @@ legend.sec_title {
 
 /* RESPONSIVE — collapse to single column on small screens */
 
-@media (max-width: 520px) {
+@media (max-width: 700px) {
     fieldset {
         grid-template-columns: 1fr;
     }
     .sec_field.full-width,
     textarea.sec_input {
         grid-column: 1;
+    }
+
+    .jobs_layout {
+        grid-template-columns: 1fr;
+    }
+
+    .job_list {
+        grid-template-columns: 1fr;
+    }
+
+    .recruitment-notice {
+        position: static;
     }
 }
 
