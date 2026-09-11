@@ -7,9 +7,7 @@ body {
     color: #ffffff;
 }
 
-
 /* Background Video */
-
 #background-video {
     inset: 0;
     position: fixed;
@@ -20,14 +18,11 @@ body {
     z-index: -1;
 }
 
-
 /* Header & Navigation */
-
 header .logo img {
     width: 120px;
     height: auto;
 }
-
 
 nav a {
     color: #ffffff;
@@ -40,16 +35,13 @@ nav a {
     border: 1px solid transparent;
 }
 
-
 nav a:hover {
     background-color: rgba(168, 85, 247, 0.2);
     border-color: #ffffff;
     transform: translateY(-2px);
 }
 
-
 /* Hero Section */
-
 .index_hero {
     text-align: center;
     padding: 150px 20px;
@@ -57,50 +49,41 @@ nav a:hover {
     margin: auto;
 }
 
-
 .index_hero h1 {
     font-size: 3rem;
     margin-bottom: 10px;
 }
-
 
 .index_hero h2 {
     font-size: 1.5rem;
     font-weight: normal;
 }
 
-
 .index_hero p {
     font-size: 1.1rem;
     line-height: 1.6;
 }
 
-
 /* General Content Sections */
-
 .index_content {
     max-width: 1000px;
     margin: 40px auto;
     padding: 50px;
     background-color: rgba(18, 11, 28, 0.85);
     border-radius: 10px;
-    border: 1px solid #8b5cf6
+    border: 1px solid #8b5cf6;
 }
-
 
 .index_content h2 {
     text-align: center;
     margin-bottom: 30px;
 }
 
-
 /* Services */
-
 .index_services {
     display: flex;
     gap: 20px;
 }
-
 
 .index_service-box {
     flex: 1;
@@ -111,19 +94,15 @@ nav a:hover {
     text-align: center;
 }
 
-
 .index_service-box h3 {
     margin-top: 0;
 }
 
-
 /* Table */
-
 table {
     width: 100%;
     border-collapse: collapse;
 }
-
 
 th,
 td {
@@ -132,14 +111,11 @@ td {
     text-align: left;
 }
 
-
 th {
     background-color: rgba(168, 85, 247, 0.25);
 }
 
-
 /* Aboriginal and Torres Strait Islander Statement */
-
 .index_acknowledgement {
     max-width: 900px;
     margin: 50px auto;
@@ -150,22 +126,19 @@ th {
     border-radius: 8px;
 }
 
-
 .index_acknowledgement h2 {
     margin-top: 0;
 }
-
 
 .index_acknowledgement p {
     line-height: 1.6;
 }
 
-
-/* Notice Aside */
+/* Notice Aside (Đặt bên trong main) */
 .recruitment-notice {
-    max-width: 800px;
-    margin: 20px auto 0;
-    padding: 12px 20px;
+    max-width: 100%;
+    margin: 0 auto 20px;
+    padding: 14px 20px;
     background: rgba(168, 85, 247, 0.1);
     border: 1px solid rgba(168, 85, 247, 0.3);
     border-radius: 8px;
@@ -176,6 +149,7 @@ th {
 .recruitment-notice h2 {
     margin: 0 0 4px;
     font-size: 1rem;
+    color: #c084fc;
 }
 
 .recruitment-notice p {
@@ -183,13 +157,15 @@ th {
     font-size: 0.85rem;
 }
 
+/* Main Content */
 main {
     max-width: 1000px;
     margin: 40px auto;
     padding: 40px 20px;
     border-radius: 12px;
     background-color: rgba(18, 11, 28, 0.90);
-    color: #FFFFFF;}
+    color: #FFFFFF;
+}
 
 main h1 {
     font-size: 2rem;
@@ -260,17 +236,17 @@ main dd {
 }
 
 /* =========================================
-   Member Quotes
+   Member Quotes (Đã đổi article thành section)
    ========================================= */
 
-main article {
+main section.member-quote {
     margin: 20px 0;
     padding: 15px 20px;
     border-left: 4px solid #a855f7;
     background-color: rgba(168, 85, 247, 0.08);
 }
 
-main article h4 {
+main section.member-quote h4 {
     color: #c084fc;
     margin-top: 0;
 }
@@ -358,8 +334,10 @@ main td:nth-child(2) {
     font-family: monospace;
 }
 
+/* =========================================
+   Job List Grid & Cards (Đã đổi article thành section)
+   ========================================= */
 
-/* Job List Grid */
 .job_list {
     display: grid;
     grid-template-columns: repeat(4, auto);
@@ -370,17 +348,18 @@ main td:nth-child(2) {
     flex: 1;
 }
 
-/* Job Card */
-.job_card {
+/* Job Card (Dùng section.job_card) */
+section.job_card {
     padding: 20px;
     background: rgba(30, 28, 28, 0.5);
     border: 1px solid rgba(168, 85, 247, 0.3);
     border-radius: 16px;
     backdrop-filter: blur(8px);
     transition: 0.3s;
+    margin-bottom: 0; /* Reset margin từ style main section tổng */
 }
 
-.job_card:hover {
+section.job_card:hover {
     border-color: #fff;
     background: rgba(168, 85, 247, 0.2);
 }
@@ -398,7 +377,8 @@ main td:nth-child(2) {
     height: 36px;
 }
 
-.job_content h1 {
+.job_content h1, 
+.job_content h2 {
     font-size: 1.1rem;
     margin: 0;
 }
@@ -430,6 +410,8 @@ main td:nth-child(2) {
     font-size: 0.8rem;
     margin: 8px 0 4px;
     color: #fff;
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 .job_details ol, .job_details ul {
@@ -468,7 +450,10 @@ main td:nth-child(2) {
     cursor: not-allowed;
 }
 
-/* Apply Form */
+/* =========================================
+   Apply Form
+   ========================================= */
+
 form {
     display: flex;
     flex-direction: column;
@@ -541,7 +526,7 @@ legend.sec_title {
     background-color: rgba(255, 255, 255, 0.95);
 }
 
-/* Fields that should take the full row (job reference, dob, other gender specs and textarea for other skills) */
+/* Fields that should take the full row */
 .sec_field.jobref {
     grid-column: 1 / -1;
 }
@@ -559,8 +544,6 @@ legend.sec_title {
     grid-column: 1 / -1;
     width: 100%;
     box-sizing: border-box; 
-    /* makes sure the 10px 12px padding on .sec_input gets included within that 100% width instead 
-    of adding on top of it and causing an overflow past the fieldset's edge. */
 }
 
 /* --- Radio / checkbox groups span full width --- */
@@ -584,7 +567,7 @@ legend.sec_title {
     display: flex;
     align-items: center;
     gap: 6px;
-    cursor: pointer; /* this makes the whole label clickable-looking */
+    cursor: pointer;
 }
 
 /* --- Buttons --- */
@@ -630,10 +613,7 @@ legend.sec_title {
 
 /* RESPONSIVE — collapse to single column on small screens */
 
-@media (max-width: 520px) 
-/* When the media screen is below 520 pixels the labels and 
-input will autmoatically collapse to a single column */
-{
+@media (max-width: 520px) {
     fieldset {
         grid-template-columns: 1fr;
     }
@@ -643,8 +623,7 @@ input will autmoatically collapse to a single column */
     }
 }
 
-/* Respect users who've enabled "Reduce Motion" in their OS settings —
-   hides the moving background video instead of forcing it on everyone */
+/* Respect users who've enabled "Reduce Motion" in their OS settings */
 @media (prefers-reduced-motion: reduce) {
     #background-video {
         display: none;
@@ -652,7 +631,6 @@ input will autmoatically collapse to a single column */
 }
 
 /* Footer */
-
 footer {
     background: rgba(11, 7, 18, 0.95);
     border-top: 1px solid rgba(168, 85, 247, 0.15);
@@ -662,17 +640,14 @@ footer {
     font-size: 0.85rem;
 }
 
-
 footer p {
     margin: 8px;
 }
-
 
 footer a {
     color: #ffffff;
     text-decoration: none;
 }
-
 
 footer a:hover {
     text-decoration: underline;
