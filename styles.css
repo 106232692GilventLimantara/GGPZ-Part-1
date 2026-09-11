@@ -265,14 +265,14 @@ main dd {
    Member Quotes (Đã đổi article thành section)
    ========================================= */
 
-main section.member-quote {
+main article {
     margin: 20px 0;
     padding: 15px 20px;
     border-left: 4px solid #a855f7;
     background-color: rgba(168, 85, 247, 0.08);
 }
 
-main section.member-quote h4 {
+main article h4 {
     color: #c084fc;
     margin-top: 0;
 }

@@ -30,10 +30,19 @@
             <a href="apply.html">Apply Now</a>
             <a href="about.html">About</a>
         </nav>
+        <style>
+        /* Embedded CSS: subtle zoom effect on the team photo, unique to about.html */
+        main figure img {
+            transition: transform 0.3s ease;
+        }
+        main figure img:hover {
+            transform: scale(1.03);
+        }
+        </style>
     </header>
     <main>
 
-        <h2>About Our Team</h2>
+        <h1>About Our Team</h1>
 
         <section>
             <h3>Our Group</h3>
@@ -122,13 +131,13 @@
             <h3>Team Fun Facts</h3>
 
             <table>
-                <caption>Fun Facts About the GGPZ Team</caption>
+                <caption style="letter-spacing: 1px;">Fun Facts About the GGPZ Team</caption>
 
                 <thead>
                     <tr>
-                        <th>Member</th>
-                        <th>Student ID</th>
-                        <th>Fun Fact</th>
+                        <th scope="col">Member</th> <!-- adding scope="col" lets screen readers correctly associate each header with its column data.-->
+                        <th scope="col">Student ID</th>
+                        <th scope="col">Fun Fact</th>
                     </tr>
                 </thead>
 
