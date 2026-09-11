@@ -26,20 +26,37 @@
             </a>
         </div>
 
-        <nav style="display: flex; gap: 13px;">
+        <nav style="display: flex; gap: 13px;" aria-label="Main navigation">
             <a href="jobs.html">Job List</a>
             <a href="apply.html">Apply Now</a>
             <a href="about.html">About</a>
         </nav>
+
+        <style>
+        /* Embedded CSS: required-field note and required mark, relevant only to the apply.html form */
+        .required_note {
+            color: red;
+            font-style: italic;
+            font-size: 0.85rem;
+            text-align: center;
+            margin-top: -8px;
+            margin-bottom: 24px;
+        }
+        .required_mark {
+            font-weight: 700;
+            color: #EF4444;
+        }
+        </style>
     </header>
     <main>
        <h1>Apply for a Position at GGPZ</h1>
-       <p>Thank you for your interest in a career with GGPZ Cyber Solutions. Complete the form below with your details and the job reference number, found on our Job Descriptions page. All required fields must be filled in accurately before submitting.</p>
+       <p>Thank you for your interest in a career with GGPZ Cyber Solutions. Complete the form below with your details and the job reference number, found on our Job Descriptions page. All required fields must be filled in accurately <span style="font-weight:700; color:#c084fc;">before submitting</span>.</p>
+       <p class="required_note">Fields marked with <span class="required_mark">*</span> must be completed.</p>
        <form method="POST" action="http://mercury.swin.edu.au/it000000/formtest.php">
          <fieldset> <!-- Fieldset for Position Information -->
             <legend class="sec_title" >Position Information</legend>
             <div class="sec_field jobref">
-                <label class="sec_label" for="jobref">Job Reference<span style="color:#EF4444;">*</span></label>
+                <label class="sec_label" for="jobref">Job Reference<span class="required_mark">*</span></label>
                 <input class="sec_input" type="text" id="jobref" name="jobref" maxlength="6" pattern="[A-Z]{3}[0-9]{3}" 
                 title="Three capital letters followed by three digits, e.g. GPZ123" required>
             </div>
@@ -47,21 +64,21 @@
          <fieldset> <!-- Fieldset for Personal Details -->
             <legend class="sec_title" >Personal Details</legend>
             <div class="sec_field">
-                <label class="sec_label" for="firstname">First Name<span style="color:#EF4444;">*</span></label>
+                <label class="sec_label" for="firstname">First Name<span class="required_mark">*</span></label>
                 <input class="sec_input" type="text" id="firstname" name="firstname" pattern="[A-Za-z\s]{1,20}" maxlength="20" title="Please enter a valid First Name" required>
             </div>
             <div class="sec_field">
-                <label class="sec_label" for="lastname">Last Name<span style="color:#EF4444;">*</span></label>
+                <label class="sec_label" for="lastname">Last Name<span class="required_mark">*</span></label>
                 <input class="sec_input" type="text" id="lastname" name="lastname" pattern="[A-Za-z\s]{1,20}" maxlength="20" title="Please enter a valid Last Name" required>
             </div>
             <div class="sec_field dob">
-                <label class="sec_label" for="dob">Date of Birth<span style="color:#EF4444;">*</span></label>
+                <label class="sec_label" for="dob">Date of Birth<span class="required_mark">*</span></label>
                 <input class="sec_input" type="text" id="dob" name="dob" pattern="^(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])/(196[1-9]|19[7-9][0-9]|200[0-8])$" 
                 placeholder="dd/mm/yyyy" title="Please enter a valid date of birth" required>
             </div>
             <!-- Realistic age restriction from 1961 to 2008 (min age is 18 and max is 65) -->
             <fieldset> <!-- Fieldset for Gender Selection -->
-                <legend class="sec_title" >Gender</legend>
+                <legend class="sec_title" >Gender<span class="required_mark">*</span></legend>
                 <div class="sec_gender">
                     <div class="sec_option"> <label for="male"><input class="sec_input" type="radio" id="male" name="gender" value="male" required>Male</label> </div>
                     <div class="sec_option"> <label for="female"><input class="sec_input" type="radio" id="female" name="gender" value="female">Female</label> </div>
@@ -78,15 +95,15 @@
          <fieldset> <!-- Fieldset for Address Details -->
             <legend class="sec_title" >Address Details</legend>
             <div class="sec_field">
-                <label class="sec_label" for="street_address">Street Address<span style="color:#EF4444;">*</span></label>
+                <label class="sec_label" for="street_address">Street Address<span class="required_mark">*</span></label>
                 <input class="sec_input" type="text" id="street_address" name="street_address" maxlength="40" pattern="[A-Za-z0-9\s]{1,40}" title="Please enter a valid Street Address" required>
             </div>
             <div class="sec_field">
-            <label class="sec_label" for="suburb">Suburb<span style="color:#EF4444;">*</span></label>
+            <label class="sec_label" for="suburb">Suburb<span class="required_mark">*</span></label>
             <input class="sec_input" type="text" id="suburb" name="suburb" maxlength="40" pattern="[A-Za-z\s]{1,40}" title="Please enter a valid Suburb" required>
             </div>
             <div class="sec_field">
-                <label class="sec_label" for="state">State<span style="color:#EF4444;">*</span></label>
+                <label class="sec_label" for="state">State<span class="required_mark">*</span></label>
                 <select class="sec_input" id="state" name="state" required>
                     <option value="">Select a state</option>
                     <option value="VIC">VIC</option>
@@ -100,18 +117,18 @@
                 </select>
             </div>
             <div class="sec_field">
-                <label class="sec_label" for="postcode">Postcode<span style="color:#EF4444;">*</span></label>
+                <label class="sec_label" for="postcode">Postcode<span class="required_mark">*</span></label>
                 <input class="sec_input" type="text" id="postcode" name="postcode" maxlength="4" pattern="[0-9]{4}" title="Please enter a valid 4-digit Postcode" required>
             </div>
          </fieldset>
          <fieldset> <!-- Fieldset for Contact Details -->
             <legend class="sec_title" >Contact Details</legend>
             <div class="sec_field">
-                <label class="sec_label" for="email">Email<span style="color:#EF4444;">*</span></label>
+                <label class="sec_label" for="email">Email<span class="required_mark">*</span></label>
                 <input class="sec_input" type="email" id="email" name="email" maxlength="40" title="Please enter a valid Email Address" required>
             </div>
             <div class="sec_field">
-                <label class="sec_label" for="phone">Phone<span style="color:#EF4444;">*</span></label>
+                <label class="sec_label" for="phone">Phone<span class="required_mark">*</span></label>
                 <input class="sec_input" type="tel" id="phone" name="phone" minlength="8" maxlength="12" pattern="\d{8,12}" title="Please enter a valid 8-12 digit Phone Number" required>
             </div>
         </fieldset>
