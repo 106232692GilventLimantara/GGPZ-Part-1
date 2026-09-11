@@ -10,6 +10,12 @@
     <title>GGPZ Cyber Solutions</title>
 
     <link rel="stylesheet" href="styles.css">
+    <style>
+    /* Embedded CSS: soft glow behind the homepage hero heading, unique to index.html */
+    .index_hero h1 {
+        text-shadow: 0 0 18px rgba(168, 85, 247, 0.5);
+    }
+    </style>
 </head>
 
 <body>
@@ -29,7 +35,7 @@
         </div>
 
 
-        <nav style="display: flex; gap: 13px;">
+        <nav aria-label="Main Navigation" style="display: flex; gap: 13px;">
             <a href="jobs.html">Job List</a>
             <a href="apply.html">Apply Now</a>
             <a href="about.html">About</a>
@@ -44,9 +50,9 @@
         <!-- Hero Section -->
         <section class="index_hero">
 
-            <h1 style="margin: 20px;">Global Grid Programming Zone Cyber Solutions</h1>
+            <h1>Global Grid Programming Zone Cyber Solutions</h1>
 
-            <h2 style="color: white; padding: 20px;">"Defending Digital Trust, One Layer at a Time."</h2>
+            <p style="color: white; padding: 20px; font-size: 2.0rem;">"Defending Digital Trust, One Layer at a Time."</p>
             
             <a href="images/GGPZ_logo.png" target="_blank">
                 <img src="images/GGPZ_logo.png" alt="Company Logo" style="max-width: 500px;">
@@ -69,7 +75,7 @@
             </p>
 
             <p>
-                As we expand our digital team, we're looking for people who care about doing security work that actually protects people — not just ticking compliance boxes.
+                As we expand our digital team, we're looking for people who care about doing security work that actually protects people — <span style="font-style: italic; color: #c084fc;">not just ticking compliance boxes</span>.
             </p>
 
         </section>
@@ -113,27 +119,27 @@
 
             <h2>Our Company</h2>
 
-            <table style="pointer-events: none;">
+            <table style="pointer-events: none;"> <!-- Disable pointer events for the table to avoid hover issues caused by clashing css from about page's styling-->
 
                 <tr>
-                    <th colspan="3">COMPANY INFORMATION</th>
+                    <th scope="colgroup" colspan="3">COMPANY INFORMATION</th> <!-- adding scope="colgroup" lets screen readers correctly associate this header as the heading for the whole table.-->
                 </tr>
 
                 <tr>
-                    <th>Department</th>
-                    <th>Role</th>
-                    <th>Description</th>
+                    <th scope="col">Department</th> <!-- adding scope="col" lets screen readers correctly associate each header with its column data.-->
+                    <th scope="col">Role</th>
+                    <th scope="col">Description</th>
                 </tr>
 
                 <tr>
                     <td rowspan="2">Cybersecurity</td>
-                    <td style="color: white; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: normal">Security Analyst</td>
+                    <td style="color: white; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: normal">Security Analyst</td> <!-- these inline styles have been used to avoid font issues caused by clashing css from about page's styling-->
                     <td>Monitors systems and identifies potential security threats.</td>
                 </tr>
 
                 <tr>
                     <td>Security Engineer</td>
-                    <td style="color: white; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: normal">Designs and maintains security systems to protect company data.</td>
+                    <td style="color: white; font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif; font-weight: normal">Designs and maintains security systems to protect company data.</td> <!-- these inline styles have been used to avoid font issues caused by clashing css from about page's styling-->
                 </tr>
 
                 <tr>
